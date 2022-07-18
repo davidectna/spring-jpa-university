@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista dei dipartimenti</title>
+</head>
+<body>
+    <h1>List of Departments</h1>
+    <!--ul class="list-group">
+        <li class="list-group-item" th:each="departments : ${departmentList}" th:text="${departments.getName()}">xxx</li>
+    </-ul-->
+
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>address</th>
+                <th>phone</th>
+                <th>email</th>
+                <th>website</th>
+                <th>head of department</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each = "c : ${departmentList}">
+                <td th:text = "${c.name}"></td>
+                <td th:text = "${c.address}"></td>
+                <td th:text = "${c.phone}"></td>
+                <td th:text = "${c.website}"></td>
+                <td th:text = "${c.headOfDepartment}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
