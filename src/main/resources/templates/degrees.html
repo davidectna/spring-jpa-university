@@ -14,12 +14,12 @@
     <table class="table">
         <thead>
             <tr>
-                <th>name</th>
-                <th>level</th>
-                <th>address</th>
-                <th>email</th>
-                <th>website</th>
-                <th>department</th> 
+                <th>Name</th>
+                <th>Level</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Website</th>
+                <th>Department</th> 
             </tr>
         </thead>
         <tbody>
@@ -29,7 +29,7 @@
                 <td th:text = "${degreeList.address}"></td>
                 <td th:text = "${degreeList.email}"></td>
                 <td th:text = "${degreeList.website}"></td>
-                <td th:text = "${degreeList.department}"></td>
+                <td th:text = "${degreeList.department.name}"></td>
             </tr>
         </tbody>
     </table>
