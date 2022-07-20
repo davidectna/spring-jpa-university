@@ -19,9 +19,9 @@ public class DegreeController {
 	private DegreeRepository repo;
 	
 	@GetMapping
-	public String akkiappa (Model model) {
+	public String Degree (Model model) {
 		List <Degree> degreeList = (List<Degree>) repo.findAll();
-		model.addAttribute("listaDeiPaesi", degreeList);
+		model.addAttribute("degreesList", degreeList); // "listadeipaesi" devo richiamarlo dentro al template
 		return "degrees";
 	}
 	

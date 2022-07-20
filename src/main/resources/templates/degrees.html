@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <th:block th:replace="fragments :: risorse-head-bootstrap"></th:block>
 <body>
+    <nav th:replace="fragments :: navbar"></nav>
     <h1>List of degrees</h1>
     <!--ul class="list-group">
         <li class="list-group-item" th:each="departments : ${listaDeiPaesi}" th:text="${departments.getName()}">xxx</li>
@@ -23,13 +20,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each = "degreeList: ${listaDeiPaesi}">
-                <td th:text = "${degreeList.name}"></td>
-                <td th:text = "${degreeList.level}"></td>
-                <td th:text = "${degreeList.address}"></td>
-                <td th:text = "${degreeList.email}"></td>
-                <td th:text = "${degreeList.website}"></td>
-                <td th:text = "${degreeList.department.name}"></td>
+            <tr th:each = "dl: ${degreesList}">
+                <td th:text = "${dl.name}"></td>
+                <td th:text = "${dl.level}"></td>
+                <td th:text = "${dl.address}"></td>
+                <td th:text = "${dl.email}"></td>
+                <td th:text = "${dl.website}"></td>
+                <td th:text = "${dl.department.name}"></td>
             </tr>
         </tbody>
     </table>

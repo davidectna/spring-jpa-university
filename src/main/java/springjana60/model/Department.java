@@ -19,6 +19,13 @@ public class Department {
 	private String name ;
 	private String address ;
 	private String phone;
+	private String email;
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	private String website ;
 	private String headOfDepartment ;
 	
@@ -57,10 +64,10 @@ public class Department {
 	public void setWebsite(String website) {
 		this.website = website;
 	}
-	public String getHeadOfDepartments() {
+	public String getHeadOfDepartment() {
 		return headOfDepartment;
 	}
-	public void setHeadOfDepartments(String headOfDepartment) {
+	public void setHeadOfDepartment(String headOfDepartment) {
 		this.headOfDepartment = headOfDepartment;
 	}
 	

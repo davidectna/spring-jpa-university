@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> 
+<head>
+  <th:block th:replace="fragments :: risorse-head-bootstrap"></th:block>
+</head>
+<body>
+  <nav th:replace="fragments :: navbar"></nav>
+  <h1>
+    Teacher's details.
+  </h1>  
+
+  <table class="table">
+    <thead>
+        <tr>
+            <th>Teacher's ID</th>
+            <th>Teacher's phone</th>
+            <th>Teacher's email</th>
+            <th>Teacher's office number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each = "tc : ${teachersContact}">
+            <td th:text = "${tc.id}"></td>
+            <td th:text = "${tc.phone}"></td>
+            <td th:text = "${tc.email}"></td>
+            <td th:text = "${tc.officeNumber}"></td>
+        </tr>
+    </tbody>
+  </table>
+</body>
+</html>

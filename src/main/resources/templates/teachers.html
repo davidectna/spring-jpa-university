@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> 
+<head>
+    <th:block th:replace="fragments :: risorse-head-bootstrap"></th:block>
+</head>
+<body >
+    <nav th:replace="fragments :: navbar"></nav>
+    <h1>
+        List of teachers:
+    </h1>
+
+    <div class="container" >
+        <div class="row" th:each = "tl : ${TeachersList}">
+            <a class="col" th:href="@{|/teacher/details/${tl.getId}|}" th:text = "|${tl.name} ${tl.surname}|"></a>
+        </div>
+    </div>
+
+    
+</body>
+</html>
